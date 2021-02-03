@@ -6,13 +6,20 @@
   "author": "Jonatan Shoshan <jonatan-bs@live.dk>",
   "license": "MIT",
   "dependencies": {
+<<<<<<< HEAD
     "isomorphic-unfetch": "^3.1.0",
+=======
+>>>>>>> 4f24ebe735a6b877faa58a6ecde0f7818c207de5
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "scripts": {
+<<<<<<< HEAD
     "dev": "next dev",
+=======
+    "dev": "next dev", 
+>>>>>>> 4f24ebe735a6b877faa58a6ecde0f7818c207de5
     "build": "next build",
     "start": "next start"
   }
