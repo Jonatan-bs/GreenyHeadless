@@ -3,10 +3,8 @@ import config from "../config"
 import fetch from "isomorphic-unfetch";
 
 const Index = (props) => {
-    console.log(props)
-
     return (
-        <Layout></Layout>
+        <Layout light="true" ></Layout>
     )
 };
 
