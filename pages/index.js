@@ -4,15 +4,18 @@ import fetch from "isomorphic-unfetch";
 
 const Index = (props) => {
     console.log(props)
+
     return (
-        <Layout>Hello world</Layout>
+        <Layout></Layout>
     )
 };
+
+// Index.layout = "default";
 
 let headers = new Headers()
 headers.append('Authorization', config.wpApi.basicAuth);
 
-Index.getInitialProps = async () =>{
+export const getStaticProps = async () => {
     // Get products
     let products = await fetch(`${config.wpApi.siteURL}/wp-json/wc/v3/products`,
     {
@@ -21,6 +24,7 @@ Index.getInitialProps = async () =>{
     })
     products = await products.json()
 
+    // Get posts
     let posts = await fetch(`${config.wpApi.siteURL}/wp-json/wp/v2/posts`,
     {
         method:'GET',
@@ -28,11 +32,13 @@ Index.getInitialProps = async () =>{
     })
     posts = await posts.json()
 
-    // Get posts
 
     return {
-        products,
-        posts
+        props: 
+        {
+            products,
+            posts
+        }
     }
 
 }
