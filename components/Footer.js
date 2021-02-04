@@ -1,3 +1,4 @@
+import NavSecondary from "./NavSecondary"; 
 import config from "../config"
 
 const Footer = () => (
@@ -14,14 +15,7 @@ const Footer = () => (
             </div>
 
         </div>
-        {/* <?php
-            wp_nav_menu( 
-                array(
-                    'menu_class' => 'secundary-menu',        
-                    'theme_location' => 'secundary-menu'
-                ) 
-            )
-        ?> */}
+        <NavSecondary/>
     </footer>
 );
 
