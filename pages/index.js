@@ -1,10 +1,51 @@
 import Layout from "../components/Layout"
+import Hero from "../components/Hero"
 import config from "../config"
 import fetch from "isomorphic-unfetch";
 
 const Index = (props) => {
     return (
-        <Layout light="false" ></Layout>
+        <Layout light="false" >
+
+            <div id="front-page">
+
+                {/* HERO */}
+                <section>
+                    <Hero/>
+                </section>
+
+                {/* Starter pack CTA */}
+                <section className="content mb animate slideIn">
+                    {/* <?php  get_template_part('components/starterpack');?> */}
+                </section>
+
+                {/* Products */}
+                <section className="content mb">
+                    {/* <?php  get_template_part('components/products','featured');?> */}
+                </section>
+
+                {/* Symbols */}
+                <section className="content mb ">
+                    {/* <?php  get_template_part('components/symbols');?> */}
+                </section>
+
+                {/* About Greeny juices */}
+                <section className="mb">
+                    {/* <?php  get_template_part('components/frontpage','about');?> */}
+                </section>
+                
+                {/* Blog */}
+                <section className="content mb">
+                    {/* <?php  get_template_part('components/blog','teaser');?> */}
+                </section>
+                {/* Newsletter */}
+                <section className="content mb animate slideIn">
+                    {/* <?php  get_template_part('components/newsletter');?> */}
+                </section>
+        
+                
+            </div>
+        </Layout>
     )
 };
 
