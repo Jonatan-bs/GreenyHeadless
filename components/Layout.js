@@ -15,16 +15,16 @@ const Layout = (props) => {
                 <title>tester</title>
             </Head>
                 
-                <header className="greeny">
+                <header className={`greeny ${props.light ? "light" : ""} `}>
                     <div className="container">
                         <Link href="/">
-                            <a><img src={props.light ? config.siteURL + "/images/logo-light.svg" : config.siteURL + "/images/logo.svg"} alt="logo" className="logo"/></a>
+                            <a><img src={`${ config.siteURL}/images/${props.light ? "logo-light.svg" : "logo.svg" }`} alt="logo" className="logo"/></a>
                         </Link>
                         <div className="symbols">
                             <Link href={config.siteURL + "/account"}>
                                 <a>
                                     <div className="account symbol">
-                                        <img src={props.light ? config.siteURL +  "/images/account-light.svg" : config.siteURL + "/images/account-green.svg"} alt="account" />
+                                        <img src={`${ config.siteURL}/images/${props.light ? "account-light.svg" : "account.svg" }`} alt="account" />
                                     </div>
                                 </a>
                             </Link>
@@ -33,7 +33,7 @@ const Layout = (props) => {
                             <Link href={config.siteURL + "/cart"}>
                                 <a>
                                     <div className="add-to-cart symbol">
-                                        <img  className="" src={props.light ? config.siteURL + "/images/cart-light.svg" : config.siteURL + "/images/cart-green.svg"} alt="cart" />
+                                        <img  className="" src={`${ config.siteURL}/images/${props.light ? "cart-light.svg" : "cart.svg" }`} alt="cart" />
                                         
                                             <div className="qty" 
                                                 /* <?php if(!WC()->cart->get_cart_contents_count()) : ?> 

@@ -1322,7 +1322,7 @@ nav.woocommerce-MyAccount-navigation li.is-active a {
   background-color: #2699fb !important;
 }
 
-body,
+#__next,body,
 html {
   margin: 0;
   padding: 0;
@@ -1339,7 +1339,7 @@ html {
   }
 }
 
-body {
+#__next {
   display: flex;
   flex-direction: column;
 }

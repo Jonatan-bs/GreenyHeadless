@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 const Index = (props) => {
     return (
-        <Layout light="true" ></Layout>
+        <Layout light="false" ></Layout>
     )
 };
 
