@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
+import Starterpack from "../components/Starterpack"
 import config from "../config"
 import fetch from "isomorphic-unfetch";
 
@@ -16,7 +17,7 @@ const Index = (props) => {
 
                 {/* Starter pack CTA */}
                 <section className="content mb animate slideIn">
-                    {/* <?php  get_template_part('components/starterpack');?> */}
+                    <Starterpack/>
                 </section>
 
                 {/* Products */}
