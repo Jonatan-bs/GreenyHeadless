@@ -1,6 +1,7 @@
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Starterpack from "../components/Starterpack"
+import FeaturedProducts from "../components/FeaturedProducts"
 import config from "../config"
 import fetch from "isomorphic-unfetch";
 
@@ -22,7 +23,7 @@ const Index = (props) => {
 
                 {/* Products */}
                 <section className="content mb">
-                    {/* <?php  get_template_part('components/products','featured');?> */}
+                    <FeaturedProducts {...props}/>
                 </section>
 
                 {/* Symbols */}
