@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import config from "../../config"
 
 const SingleProduct = (props) => (
 
 
     <div id={`product-${props.product.id}`} className={`product animate slideIn sequence ${props.loadmore ? ' activated ' : ''}`}> 
         
-        <Link href={props.product.permalink}>
+        <Link href={config.siteURL + "/shop/" + props.product.slug}>
             <a>
                 <img  className="product-image" src={props.product.images[0].src}  alt={props.product.images[0].alt}/>
                 
@@ -14,7 +15,7 @@ const SingleProduct = (props) => (
 
             </a>
         </Link>
-        <Link href={props.product.permalink}>
+        <Link href={config.siteURL + "/shop/" + props.product.slug}>
             <a >
                 <p className="display-md color-dark  title">{props.product.name}</p>
             </a>
