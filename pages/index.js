@@ -2,6 +2,9 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Starterpack from "../components/Starterpack"
 import FeaturedProducts from "../components/FeaturedProducts"
+import Symbols from "../components/Symbols"
+import About from "../components/About"
+import BlogTeaser from "../components/BlogTeaser"
 import config from "../config"
 import fetch from "isomorphic-unfetch";
 
@@ -28,18 +31,19 @@ const Index = (props) => {
 
                 {/* Symbols */}
                 <section className="content mb ">
-                    {/* <?php  get_template_part('components/symbols');?> */}
+                    <Symbols/>
                 </section>
 
                 {/* About Greeny juices */}
                 <section className="mb">
-                    {/* <?php  get_template_part('components/frontpage','about');?> */}
+                    <About/>
                 </section>
                 
                 {/* Blog */}
                 <section className="content mb">
-                    {/* <?php  get_template_part('components/blog','teaser');?> */}
+                    <BlogTeaser {...props}/>
                 </section>
+
                 {/* Newsletter */}
                 <section className="content mb animate slideIn">
                     {/* <?php  get_template_part('components/newsletter');?> */}
