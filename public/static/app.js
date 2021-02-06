@@ -173,7 +173,7 @@ function animateInViewport() {
 
 document.addEventListener('scroll', animateInViewport);
 window.addEventListener('resize', animateInViewport);
-window.addEventListener('load', animateInViewport);
+// window.addEventListener('load', animateInViewport);
 
 /***/ }),
 
