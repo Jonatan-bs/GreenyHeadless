@@ -6,7 +6,7 @@ const SingleProduct = (props) => (
 
     <div id={`product-${props.product.id}`} className={`product animate slideIn sequence ${props.loadmore ? ' activated ' : ''}`}> 
         
-        <Link href={config.siteURL + "/shop/" + props.product.slug}>
+        <Link as={config.siteURL + "/shop/" + props.product.slug} href={config.siteURL + "/shop/" + props.product.id}>
             <a>
                 <img  className="product-image" src={props.product.images[0].src}  alt={props.product.images[0].alt}/>
                 
@@ -15,7 +15,7 @@ const SingleProduct = (props) => (
 
             </a>
         </Link>
-        <Link href={config.siteURL + "/shop/" + props.product.slug}>
+        <Link as={config.siteURL + "/shop/" + props.product.slug} href={config.siteURL + "/shop/" + props.product.id}>
             <a >
                 <p className="display-md color-dark  title">{props.product.name}</p>
             </a>

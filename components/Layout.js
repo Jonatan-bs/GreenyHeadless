@@ -56,7 +56,7 @@ const Layout = (props) => {
                 </header>
                     <div className="wrapper">
                         { props.content ? 
-                            (<div class="content header-padding"> { props.children } </div> )
+                            (<div className="content header-padding"> { props.children } </div> )
                         : 
                              props.children 
                         }
