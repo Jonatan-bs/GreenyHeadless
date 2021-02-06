@@ -26,7 +26,7 @@ const Layout = (props) => {
                             <Link href={config.siteURL + "/account"}>
                                 <a>
                                     <div className="account symbol">
-                                        <img src={`${ config.siteURL}/images/${props.light ? "account-light.svg" : "account.svg" }`} alt="account" />
+                                        <img src={`${ config.siteURL}/images/${props.light ? "account-light.svg" : "account-green.svg" }`} alt="account" />
                                     </div>
                                 </a>
                             </Link>
@@ -35,7 +35,7 @@ const Layout = (props) => {
                             <Link href={config.siteURL + "/cart"}>
                                 <a>
                                     <div className="add-to-cart symbol">
-                                        <img  className="" src={`${ config.siteURL}/images/${props.light ? "cart-light.svg" : "cart.svg" }`} alt="cart" />
+                                        <img  className="" src={`${ config.siteURL}/images/${props.light ? "cart-light.svg" : "cart-green.svg" }`} alt="cart" />
                                         
                                             <div className="qty" 
                                                 /* <?php if(!WC()->cart->get_cart_contents_count()) : ?> 

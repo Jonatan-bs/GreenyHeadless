@@ -488,6 +488,7 @@ footer .secundary-menu a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
 }
 .product-list .product.featured .product-image, .woocommerce .product-list .product.featured .product-image {
   border: 3px solid #2b9558;
