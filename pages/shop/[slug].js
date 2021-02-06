@@ -13,7 +13,7 @@ const ShopIndex = (props) => {
     components = components ? components.value : ""
     let ingredients = product.meta_data.find( m => m.key === "ingredients_fields")
     ingredients = ingredients ? ingredients.value : ""
-    console.log(product)
+
     return (
         <Layout light>
             <div id="single-product">

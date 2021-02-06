@@ -1,7 +1,6 @@
 import config from "../../config"
 
 const Ingredients = ({ingredients}) => {
-    console.log(ingredients)
 
     return(
     <div className="ingredients">

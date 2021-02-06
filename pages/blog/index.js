@@ -4,9 +4,8 @@ import config from "./../../config"
 import fetch from "isomorphic-unfetch";
 
 const BlogIndex = ({blogPosts}) => {
-    console.log(1, blogPosts)
     return (
-        <Layout content>
+        <Layout >
             <BlogList blogPosts={blogPosts}/>
         </Layout>
     )
