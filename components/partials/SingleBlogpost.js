@@ -22,7 +22,7 @@ class SingleBlogpost extends React.Component  {
                     <div className="blog-tag">
                         {this.props.post.categories.map( categoryID => {
                             return (
-                                <Link href={config.siteURL + "/category/" + categoryID}>
+                                <Link key={categoryID} href={config.siteURL + "/category/" + categoryID}>
                                     <a >
                                         {categoryID + " "}
                                     </a>

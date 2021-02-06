@@ -9,7 +9,7 @@ const ShopIndex = (props) => {
     const { slug } = router.query
     let product = props.products.find( p => p.slug === slug)
     return (
-        <Layout content>
+        <Layout light>
             <ProductSingleShowcase product={product}/>
         </Layout>
     )
@@ -23,7 +23,7 @@ headers.append('Authorization', config.wpApi.basicAuth);
 
 export const getStaticProps = async () => {
     // Get products
-    let products = await fetch(`${config.wpApi.siteURL}/wp-json/wc/v3/products`,
+    let products = await fetch(`${config.wpApi.siteURL}/wp-json/wc/v2/products`,
     {
         method:'GET',
         headers: headers
