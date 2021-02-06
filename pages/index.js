@@ -62,7 +62,7 @@ headers.append('Authorization', config.wpApi.basicAuth);
 
 export const getStaticProps = async () => {
     // Get products
-    let products = await fetch(`${config.wpApi.siteURL}/wp-json/wc/v3/products`,
+    let products = await fetch(`${config.wpApi.siteURL}/wp-json/wc/v3/products?status=publish`,
     {
         method:'GET',
         headers: headers
@@ -70,7 +70,7 @@ export const getStaticProps = async () => {
     products = await products.json()
 
     // Get posts
-    let blogPosts = await fetch(`${config.wpApi.siteURL}/wp-json/wp/v2/posts`,
+    let blogPosts = await fetch(`${config.wpApi.siteURL}/wp-json/wp/v2/posts?status=publish`,
     {
         method:'GET',
         headers: headers

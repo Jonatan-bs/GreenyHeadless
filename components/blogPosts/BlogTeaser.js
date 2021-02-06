@@ -5,7 +5,7 @@ const BlogTeaser = props => (
  
     <>
 
-        { props.blogPosts.filter( post => post.status === "publish" ).slice(0,2).map( post => <SingleBlogpost key={post.id} post={post}/>) }
+        { props.blogPosts.slice(0,2).map( post => <SingleBlogpost key={post.id} post={post}/>) }
             
         <div className="flexcenter">
             <Link href="/blog">
