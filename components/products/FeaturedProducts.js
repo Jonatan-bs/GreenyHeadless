@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import SingleProduct from "./partials/SingleProduct"; 
+import SingleProduct from "./../partials/SingleProduct"; 
 
 const FeaturedProducts = (props) => (
     

@@ -6,7 +6,6 @@ import Nav from "./Nav";
 import NavMobile from "./NavMobile"; 
 
 const Layout = (props) => {
-    console.log(props)
     return (
         <>
             <Head>
@@ -56,7 +55,12 @@ const Layout = (props) => {
                     </div>
                 </header>
                     <div className="wrapper">
-                        { props.children }
+                        { props.content ? 
+                            (<div class="content header-padding"> { props.children } </div> )
+                        : 
+                             props.children 
+                        }
+                        
                     </div>
                 <NavMobile/>
                 <Footer/>

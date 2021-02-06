@@ -25,7 +25,7 @@ const SingleProduct = (props) => (
         <div className="flex">   
             { props.product.purchasable && props.product.stock_status === "instock" ? (
         
-                <p className={`price ${props.product.on_sale ? onsale : ""}`}>
+                <p className={`price ${props.product.on_sale ? "onsale" : ""}`}>
                     { props.product.type !== 'variable' ? (
                         props.product.on_sale ? <span className="sales-price">{props.product.regular_price} $$</span> + props.product.price + "$$": props.product.price + "$$"
                     ) : "" }

@@ -1,12 +1,11 @@
-import SingleBlogpost from "./partials/SingleBlogpost"; 
-import config from "../config"
+import SingleBlogpost from "./../partials/SingleBlogpost"; 
 import Link from 'next/link'
 
 const BlogTeaser = props => (
  
     <>
 
-        { props.posts.filter( post => post.status === "publish" ).slice(0,2).map( post => <SingleBlogpost post={post}/>) }
+        { props.blogPosts.filter( post => post.status === "publish" ).slice(0,2).map( post => <SingleBlogpost post={post}/>) }
             
         <div className="flexcenter">
             <Link href="/blog">

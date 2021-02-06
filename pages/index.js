@@ -1,10 +1,10 @@
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Starterpack from "../components/Starterpack"
-import FeaturedProducts from "../components/FeaturedProducts"
+import FeaturedProducts from "../components/products/FeaturedProducts"
 import Symbols from "../components/Symbols"
 import About from "../components/About"
-import BlogTeaser from "../components/BlogTeaser"
+import BlogTeaser from "../components/blogPosts/BlogTeaser"
 import config from "../config"
 import fetch from "isomorphic-unfetch";
 
@@ -26,7 +26,7 @@ const Index = (props) => {
 
                 {/* Products */}
                 <section className="content mb">
-                    <FeaturedProducts {...props}/>
+                    <FeaturedProducts products={props.products}/>
                 </section>
 
                 {/* Symbols */}
@@ -41,7 +41,7 @@ const Index = (props) => {
                 
                 {/* Blog */}
                 <section className="content mb">
-                    <BlogTeaser {...props}/>
+                    <BlogTeaser blogPosts={props.blogPosts}/>
                 </section>
 
                 {/* Newsletter */}
@@ -70,19 +70,19 @@ export const getStaticProps = async () => {
     products = await products.json()
 
     // Get posts
-    let posts = await fetch(`${config.wpApi.siteURL}/wp-json/wp/v2/posts`,
+    let blogPosts = await fetch(`${config.wpApi.siteURL}/wp-json/wp/v2/posts`,
     {
         method:'GET',
         headers: headers
     })
-    posts = await posts.json()
+    blogPosts = await blogPosts.json()
 
 
     return {
         props: 
         {
             products,
-            posts
+            blogPosts
         }
     }
 
