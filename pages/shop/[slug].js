@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout"
 import ProductSingleShowcase from "../../components/products/ProductSingleShowcase"
+import Ingredients from "../../components/partials/Ingredients"
 import config from "./../../config"
 import fetch from "isomorphic-unfetch";
 import { useRouter } from 'next/router'
@@ -10,7 +11,9 @@ const ShopIndex = (props) => {
     let product = props.products.find( p => p.slug === slug)
     let components = product.meta_data.find( m => m.key === "component_position_fields")
     components = components ? components.value : ""
-
+    let ingredients = product.meta_data.find( m => m.key === "ingredients_fields")
+    ingredients = ingredients ? ingredients.value : ""
+    console.log(product)
     return (
         <Layout light>
             <div id="single-product">
@@ -22,22 +25,22 @@ const ShopIndex = (props) => {
 					</div>
                     <section className="description content mb">
                         {components? (
-                            components.map( c=> {
+                            components.map( (c,i)=> {
                                 return c.component === "content" ?
                                     product.description? 
-                                        <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
+                                        <div key={i} dangerouslySetInnerHTML={{ __html: product.description }}></div>
                                     :
-                                        "There's no description for this product"
+                                        <span key={i}>"There's no description for this product"</span>
                                 :
                                     c.component === "ingredients" ?
-                                    "ingredients"
+                                    <Ingredients key={i} ingredients={ingredients}/>
                                 : ""
                             })
                         ):(
                             product.description? 
                                     <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
                                 :
-                                    "There's no description for this product"
+                                    <span>"There's no description for this product"</span>
                         )}
                     </section>
                 </div>
