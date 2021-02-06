@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import SingleProduct from "./../partials/SingleProduct"; 
 
-const ProductSingle = (props) => (
+const ProductSingleShowcase = (props) => (
     
     <div>
-       
+       ss
 
     </div>
 );
 
-export default ProductSingle;
+export default ProductSingleShowcase;
