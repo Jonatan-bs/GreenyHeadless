@@ -5,8 +5,7 @@ const ProductSingleShowcase = (props) => {
     let {product} = props
     let background = product.meta_data.find( m => m.key === "background_color")
     background = background ? background.value : ""
-    console.log('background')
-    console.log(product)
+
     return (
         <div style={{background: background}} id={product.id} className="header-padding single-product-showcase">
             <div className="product-wrap">

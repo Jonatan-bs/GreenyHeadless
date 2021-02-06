@@ -8,10 +8,40 @@ const ShopIndex = (props) => {
     const router = useRouter()
     const { slug } = router.query
     let product = props.products.find( p => p.slug === slug)
+    let components = product.meta_data.find( m => m.key === "component_position_fields")
+    components = components ? components.value : ""
+
     return (
         <Layout light>
             <div id="single-product">
                 <ProductSingleShowcase product={product}/>
+                <div className="content text ">
+                    <div className="nav">
+						<a href="#" data-section="description" className="active">Description</a>
+						<a href="#" data-section="reviews" >Reviews</a>
+					</div>
+                    <section className="description content mb">
+                        {components? (
+                            components.map( c=> {
+                                return c.component === "content" ?
+                                    product.description? 
+                                        <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
+                                    :
+                                        "There's no description for this product"
+                                :
+                                    c.component === "ingredients" ?
+                                    "ingredients"
+                                : ""
+                            })
+                        ):(
+                            product.description? 
+                                    <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
+                                :
+                                    "There's no description for this product"
+                        )}
+                    </section>
+                </div>
+
             </div>
         </Layout>
     )
